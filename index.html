@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Transmission Line Fire Risk Map</title>
+  <!-- Mobile-friendly meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- Apple Touch Icon (optional) -->
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Leaflet CSS (loaded via CDN) -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha512-sA+qm3F8O7qgRwZs2v+0wqJtWnT2fzbSPQ0i4g7k30LJ3PzvKqI7+vCjKxNnksvmHj2yWnDyh8d9y47eUFsP8A=="
+    crossorigin=""
+  />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Transmission Line Fire Risk Map</h1>
+  </header>
+
+  <!-- Address input -->
+  <div id="address-container">
+    <label for="address-input">Enter address:</label>
+    <input id="address-input" type="text" placeholder="Enter an address">
+    <button id="search-btn">Search</button>
+  </div>
+
+  <!-- Map container -->
+  <div id="map"></div>
+
+  <!-- Leaflet JS (loaded via CDN) -->
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha512-1G6q+UmCdFvKFAjdJUzSZXl7OycV6nQ2kQ56S3+r0yY74qF82IY6d2dx3ijb+UR5kZJrz1ej7k39G0wJj0qQdw=="
+    crossorigin=""
+  ></script>
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
