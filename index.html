@@ -17,16 +17,28 @@
 </head>
 <body>
   <div id="container">
-    <!-- Left panel: search interface and watermark -->
+    <!-- Left panel: search interface, explanation, and watermark -->
     <div id="left-panel">
       <div id="search-container">
         <label for="address-input">Enter address:</label>
         <input id="address-input" type="text" placeholder="Enter an address">
         <button id="search-btn">Search</button>
       </div>
-      <div id="watermark-container">
-        <img src="malibu_fire.PNG" alt="Watermark" id="watermark">
+      <!-- Explanation text -->
+      <div id="explanation">
+        <p>
+          This web app displays an interactive map of transmission lines, color-coded by their fire risk probability.
+          Enter an address to re-center the map and explore the fire risk levels in your area.
+        </p>
       </div>
+      <!-- Watermark container -->
+      <div id="watermark-container">
+        <img src="yogi_bear.PNG" alt="Watermark" id="watermark">
+      </div>
+      <!-- Footer with copyright and contact information -->
+      <footer>
+        <p>&copy; 2025 Malek Alhussien. For comments, please send an email to <a href="mailto:hakimhussien@gmail.com">hakimhussien@gmail.com</a>.</p>
+      </footer>
     </div>
     <!-- Right panel: the map -->
     <div id="right-panel">
