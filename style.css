@@ -6,38 +6,71 @@ html, body {
   font-family: sans-serif;
 }
 
+/* Fixed header styling so that it is always visible */
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   background: #333;
   color: #fff;
+  z-index: 1000;
   padding: 10px;
   text-align: center;
 }
 
+.header-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Address input styling inside header */
 #address-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5px;
-  padding: 10px;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 #address-container label {
-  margin-right: 5px;
+  font-size: 16px;
 }
 
 #address-input {
   width: 200px;
-  max-width: 50%;
   padding: 5px;
+  font-size: 16px;
 }
 
 #search-btn {
   padding: 6px 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Map container styling */
+#map-container {
+  position: relative;
+  margin: 120px 10px 10px;  /* Leave enough space for the fixed header */
+  border: 2px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  height: calc(100% - 140px);
 }
 
 #map {
   width: 100%;
-  height: calc(100% - 130px);  /* Adjust for header and address input */
+  height: 100%;
+}
+
+/* Watermark styling */
+#watermark {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  opacity: 0.3;
+  width: 100px;
+  pointer-events: none;
 }
 
 /* Optional: Customize the Leaflet map container */
