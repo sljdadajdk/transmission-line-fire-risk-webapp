@@ -17,7 +17,7 @@
 </head>
 <body>
   <div id="container">
-    <!-- Left panel: search interface, explanation, QR code, watermark, and footer -->
+    <!-- Left panel: search interface, explanation text, QR code, and footer -->
     <div id="left-panel">
       <div id="search-container">
         <label for="address-input">Enter address:</label>
@@ -31,14 +31,10 @@
           Enter an address to re-center the map and explore the fire risk levels in your area.
         </p>
       </div>
-      <!-- QR Code section (dynamically generated using an external API) -->
+      <!-- QR Code section -->
       <div id="qr-container">
         <p>Scan to view on mobile:</p>
         <img id="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://sljdadajdk.github.io/transmission-line-fire-risk-webapp/" alt="QR Code">
-      </div>
-      <!-- Watermark container -->
-      <div id="watermark-container">
-        <img src="malibu_fire.PNG" alt="Watermark" id="watermark">
       </div>
       <!-- Footer with copyright and contact information -->
       <footer>
