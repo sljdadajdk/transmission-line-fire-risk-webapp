@@ -6,36 +6,35 @@
   <!-- Mobile-friendly meta tags -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <!-- Apple Touch Icon (optional) -->
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <!-- Leaflet CSS (loaded via CDN) -->
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-  />
+  <!-- Leaflet CSS (without SRI for simplicity) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Transmission Line Fire Risk Map</h1>
+    <div class="header-content">
+      <h1>Transmission Line Fire Risk Map</h1>
+      <div id="address-container">
+        <label for="address-input">Enter address:</label>
+        <input id="address-input" type="text" placeholder="Enter an address">
+        <button id="search-btn">Search</button>
+      </div>
+    </div>
   </header>
 
-  <!-- Address input -->
-  <div id="address-container">
-    <label for="address-input">Enter address:</label>
-    <input id="address-input" type="text" placeholder="Enter an address">
-    <button id="search-btn">Search</button>
+  <!-- Map container with a border and drop shadow -->
+  <div id="map-container">
+    <div id="map"></div>
+    <!-- Watermark image -->
+    <img src="yogi_bear.PNG" alt="Watermark" id="watermark">
   </div>
 
-  <!-- Map container -->
-  <div id="map"></div>
-
-  <!-- Leaflet JS (loaded via CDN) -->
-  <script
-    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-  ></script>
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <!-- Custom JavaScript -->
   <script src="script.js"></script>
 </body>
