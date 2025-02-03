@@ -12,15 +12,16 @@ html, body {
   height: 100%;
 }
 
-/* Left panel: holds the search interface and watermark */
+/* Left panel: holds search interface, explanation, watermark, and footer */
 #left-panel {
   flex: 1;
   padding: 20px;
   box-sizing: border-box;
-  background-color: #f5f5f5; /* light background */
+  background-color: #f5f5f5;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;  /* Changed from space-between to flex-start */
+  gap: 20px;
 }
 
 /* Right panel: holds the map */
@@ -32,7 +33,7 @@ html, body {
 
 /* Search container styling */
 #search-container {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 #search-container label {
@@ -52,15 +53,14 @@ html, body {
   cursor: pointer;
 }
 
-/* Map container styling: the map is inside a box with border and shadow */
-#map {
-  width: 100%;
-  height: 100%;
-  border: 2px solid #ccc;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+/* Explanation text styling */
+#explanation p {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #333;
 }
 
-/* Watermark container styling in left panel */
+/* Watermark container styling */
 #watermark-container {
   text-align: center;
 }
@@ -68,6 +68,21 @@ html, body {
 #watermark {
   max-width: 80%;
   opacity: 0.3;
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+}
+
+/* Map container styling: the map is inside a box with border and shadow */
+#map {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Optional: Customize the Leaflet map container */
