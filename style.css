@@ -12,7 +12,7 @@ html, body {
   height: 100%;
 }
 
-/* Left panel: holds search interface, explanation, watermark, and footer */
+/* Left panel: holds search interface, explanation, QR code, watermark, and footer */
 #left-panel {
   flex: 1;
   padding: 20px;
@@ -20,8 +20,8 @@ html, body {
   background-color: #f5f5f5;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;  /* Changed from space-between to flex-start */
   gap: 20px;
+  overflow-y: auto;
 }
 
 /* Right panel: holds the map */
@@ -29,6 +29,7 @@ html, body {
   flex: 1;
   padding: 20px;
   box-sizing: border-box;
+  position: relative;
 }
 
 /* Search container styling */
@@ -60,6 +61,21 @@ html, body {
   color: #333;
 }
 
+/* QR code container styling */
+#qr-container {
+  text-align: center;
+}
+
+#qr-container p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+#qr-code {
+  max-width: 150px;
+  border: 1px solid #ccc;
+}
+
 /* Watermark container styling */
 #watermark-container {
   text-align: center;
@@ -83,6 +99,43 @@ footer {
   height: 100%;
   border: 2px solid #ccc;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Legend styling (overlay in the map area) */
+#legend {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(255,255,255,0.9);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+  z-index: 1000;
+}
+
+#legend h4 {
+  margin: 0 0 5px 0;
+  font-size: 14px;
+}
+
+#legend ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#legend li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  border: 1px solid #ccc;
 }
 
 /* Optional: Customize the Leaflet map container */
